@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="msu.png" alt="Logo">
+        </div>
+        <div class="dark-mode-toggle">
+            <div id="darkModeToggle"><i class="fa-solid fa-eye"></i></div>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="#">Home</a>
+            </div>
+            <div class="dropdown">
+                <a href="#">About Me</a>
+                <div class="dropdown-content">
+                    <a href="#">Academic</a>
+                    <a href="#">Non-Academic</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">My Project</a>
+                <div class="dropdown-content">
+                    <a href="w_p.html">Project 1</a>
+                    <a href="index.html">Project 2</a>
+                    <a href="#">Project 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Blogs</a>
+                <div class="dropdown-content">
+                    <a href="#">Latest Posts</a>
+                    <a href="#">Popular Posts</a>
+                    <a href="#">Archived Posts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Social</a>
+                <div class="dropdown-content">
+                    <a href="https://www.linkedin.com/in/arpan-sawaden-13895b311/">LinkedIn</a>
+                    <a href="https://www.facebook.com/viiper.subba">Facebook</a>
+                    <a href="https://www.instagram.com/a_hustler_0/">Instagram</a>
+                </div>
+            </div>
+        </nav>
+        <div class="auth">
+            <a class="bar" href="log.html">Log/Reg</a>
+        </div>
+    </header>
+    <div class="carousel">
+        <div class="carousel-inner" id="carousel-inner">
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h2>Plying Guitar</h2>
+                    <p>Playing guitar is my go-to stress relief.
+                         It's not about impressing anyone; 
+                         it's about finding tranquility and joy in the music. 
+                         Strumming chords helps me unwind and disconnect from daily pressures. 
+                         The guitar is my companion for relaxation, self-expression, and personal enjoyment, 
+                         providing a soothing escape from the chaos of life.</p>
+                <a href="#">Hire Me</a>
+                </div>
+                <img src="gtr.png" alt="Skills Image 1">
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h2>AWS</h2>
+                    <p>Amazon Web Services (AWS) is a comprehensive and widely adopted 
+                        cloud platform, offering over 200 fully featured services from data 
+                        centers globally. AWS provides services for computing power, storage, 
+                        databases, machine learning, and analytics, among others. 
+                        It allows businesses to scale and grow efficiently, reduce IT costs, 
+                        and innovate faster by leveraging a pay-as-you-go pricing model.</p>
+                    <a href="#">Hire Me</a>
+                </div>
+                <img src="aws.png" alt="Skills Image 2">
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h2>Web development</h2>
+                    <p>Web development involves creating and maintaining websites and
+                         web applications. It encompasses several aspects, 
+                         including web design, web content development, 
+                         client-side/server-side scripting, and network security configuration.</p>
+                    <a href="#">Hire Me</a>
+                </div>
+                <img src="web.png" alt="Skills Image 3">
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" id="prev">&#10094;</button>
+            <button class="carousel-button" id="next">&#10095;</button>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <div class="popup-buttons">
+                <a href="log.html" class="popup-button">Log In</a>
+                <a href="log.html" class="popup-button">Sign Up</a>
+            </div>
+        </div>
+    </div>
+<footer>
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">Academic</a></li>
+                <li><a href="#">Nn-Academic</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>My Project</h4>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Blogs</h4>
+            <ul>
+                <li><a href="#">Latest Posts</a></li>
+                <li><a href="#">Popular Posts</a></li>
+                <li><a href="#">Archived Posts</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/arpan-sawaden-13895b311/">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/viiper.subba">Facebook</a></li>
+                <li><a href="https://www.instagram.com/a_hustler_0/">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-map">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.770460933543!2d88.51701731508488!3d27.402084982894983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374818324e0a2889%3A0x5b80588edec2df76!2sDikchu%2C%20Sikkim%20737107!5e0!3m2!1sen!2sin!4v1621830941427!5m2!1sen!2sin"  allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+    </footer>
+    <script src="portfolio.js"></script>
+</body>
+</html>

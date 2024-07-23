@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signin Form</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signin</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form method="post" action="login.php" class="login">
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required name="email" id="email">
+                    </div>
+                    <div class="field">
+                        <input type="password" id= "password" placeholder="Password" required name="password">
+                    </div>
+                    <div class="pass-remember">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember_me" id="remember_me"> Remember me
+                        </label>
+                        <a href="forgot_password.html" class="pass-link">Forgot password?</a>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LdiuPIpAAAAAGBVb8XNYC76pKmjYRXGO3x8ralX" data-theme="light"></div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" name="submit" value="Login">
+                    </div>
+                    <div class="signup-link">Not a member? <a href="#">Signin now</a></div>
+                </form>
+                <form id="registrationForm" method="post" action="reg.php" class="signup">
+                    <div class="field">
+                        <input type="text" placeholder="Email@gmail.com" required name="email">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Username" required name="username">
+                    </div>
+                    <div class="field">
+                        <input type="number" placeholder="number" required name="number">
+                    </div>
+                    <div class="field">
+                        <input type="password" id="password" placeholder="Password" required name="password">
+                    </div>
+                    <div class="field">
+                        <input type="password" id="confirm_password" placeholder="Confirm Password" required name="confirm_password">
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("loginForm").submit();
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            var passwordField = document.getElementById("password");
+            if (passwordField) {
+                passwordField.addEventListener("paste", function(e) {
+                    e.preventDefault();
+                });
+            }
+        });
+        // Function to display the countdown timer in a popup
+        function displayLockoutTimer(seconds) {
+            var popup = document.createElement('div');
+            popup.style.position = 'fixed';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.padding = '20px';
+            popup.style.background = '#fff';
+            popup.style.border = '1px solid #ccc';
+            popup.style.borderRadius = '5px';
+            popup.style.textAlign = 'center';
+            popup.innerHTML = 'You have exceeded the maximum number of login attempts. Please try again after ' + seconds + ' seconds.';
+            document.body.appendChild(popup);
+            // Disable email and password input fields
+            document.getElementById('email').disabled = true;
+            document.getElementById('password').disabled = true;
+            // Set timeout to remove the popup and enable input fields after the lockout period
+            setTimeout(function() {
+                document.body.removeChild(popup);
+                document.getElementById('email').disabled = false;
+                document.getElementById('password').disabled = false;
+            }, seconds * 1000);
+        }
+        //desable right click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
